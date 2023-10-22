@@ -1,5 +1,5 @@
 BASE_IMAGE := ghcr.io/moba1/devcontainers/base/ubuntu
-IMAGE := ghcr.io/moba1/devcontainers/nix/ubuntu
+IMAGE := ghcr.io/moba1/devcontainers/nix/unstable/ubuntu
 
 .PHONY: all
 all: build
