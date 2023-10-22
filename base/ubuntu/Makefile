@@ -8,7 +8,7 @@ all: build
 build:
 	docker buildx build \
 		--build-arg UBUNTU_VERSION=$(UBUNTU_VERSION) \
-		-t "$(IMAGE):$(VERSION)" \
+		-t "$(IMAGE):$(VERSION)-$(UBUNTU_VERSION)" \
 		--platform linux/amd64,linux/arm64 \
 		--push \
 		.
