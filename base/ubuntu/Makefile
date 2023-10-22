@@ -1,4 +1,3 @@
-UBUNTU_VERSION := latest
 IMAGE := ghcr.io/moba1/devcontainers/base/ubuntu
 VERSION := latest
 
