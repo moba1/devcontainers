@@ -12,6 +12,15 @@ build:
 		--push \
 		.
 
+.PHONY: build-latest
+build-latest:
+	docker buildx build \
+		--build-arg UBUNTU_VERSION=latest \
+		-t "$(IMAGE):latest" \
+		--platform linux/amd64,linux/arm64 \
+		--push \
+		.
+
 .PHONY: clean
 clean:
 	-docker buildx prune -f -a
