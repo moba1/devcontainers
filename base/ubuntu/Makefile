@@ -7,7 +7,6 @@ all: build
 .PHONY: build
 build:
 	docker buildx build \
-		-f Dockerfile.ubuntu \
 		--build-arg UBUNTU_VERSION=$(UBUNTU_VERSION) \
 		-t "$(IMAGE):$(VERSION)" \
 		--platform linux/amd64,linux/arm64 \
