@@ -5,9 +5,6 @@ VERSION := latest
 all: build
 
 .PHONY: build
-build: build-ubuntu
-
-.PHONY: build-ubuntu
 build:
 	docker buildx build \
 		-f Dockerfile.ubuntu \
