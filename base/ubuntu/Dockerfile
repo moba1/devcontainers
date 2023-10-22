@@ -1,5 +1,5 @@
-ARG UBUNTU_VERSION
-FROM ubuntu:$UBUNTU_VERSION
+ARG BASE_IMAGE_TAG
+FROM ubuntu:$BASE_IMAGE_TAG
 LABEL org.opencontainers.image.source=https://github.com/moba1/devcontainers
 
 ENV DEBIAN_FRONTNED noninteractive

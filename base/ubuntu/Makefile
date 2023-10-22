@@ -6,8 +6,8 @@ all: build
 .PHONY: build
 build:
 	docker buildx build \
-		--build-arg UBUNTU_VERSION=$(UBUNTU_VERSION) \
-		-t "$(IMAGE):$(VERSION)-$(UBUNTU_VERSION)" \
+		--build-arg BASE_IMAGE_TAG=$(BASE_IMAGE_TAG) \
+		-t "$(IMAGE):$(VERSION)-$(BASE_IMAGE_TAG)" \
 		--platform linux/amd64,linux/arm64 \
 		--push \
 		.
@@ -15,7 +15,7 @@ build:
 .PHONY: build-latest
 build-latest:
 	docker buildx build \
-		--build-arg UBUNTU_VERSION=latest \
+		--build-arg BASE_IMAGE_TAG=latest \
 		-t "$(IMAGE):latest" \
 		--platform linux/amd64,linux/arm64 \
 		--push \
