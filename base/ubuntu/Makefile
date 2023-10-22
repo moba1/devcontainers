@@ -1,6 +1,6 @@
 UBUNTU_VERSION := latest
+IMAGE := ghcr.io/moba1/devcontainers/base/ubuntu
 VERSION := latest
-IMAGE := ghcr.io/moba1/devcontainers/base
 
 .PHONY: all
 all: build
