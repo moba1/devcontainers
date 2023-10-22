@@ -1,5 +1,4 @@
 IMAGE := ghcr.io/moba1/devcontainers/base/ubuntu
-VERSION := latest
 
 .PHONY: all
 all: build
