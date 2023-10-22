@@ -28,5 +28,4 @@ bash -c '. .bashrc && nix-channel --add https://nixos.org/channels/nixpkgs-unsta
 bash -c '. .bashrc && nix-channel --update'
 EOF
 
-
 ENTRYPOINT [ "/usr/bin/bash", "-il" ]
