@@ -1,4 +1,5 @@
 BASE_IMAGE := ghcr.io/moba1/devcontainers/base/ubuntu
+IMAGE := ghcr.io/moba1/devcontainers/nix/ubuntu
 
 .PHONY: all
 all: build
@@ -7,7 +8,7 @@ all: build
 build:
 	docker buildx build \
 		--build-arg "BASE_IMAGE_VERSION=$(BASE_IMAGE_VERSION)-$(UBUNTU_VERSION)" \
-		-t "$(BASE_IMAGE):$(VERSION)-$(UBUNTU_VERSION)" \
+		-t "$(IMAGE):$(VERSION)-$(UBUNTU_VERSION)" \
 		--platform linux/amd64,linux/arm64 \
 		--push \
 		.
@@ -16,7 +17,7 @@ build:
 build-latest:
 	docker buildx build \
 		--build-arg BASE_IMAGE_VERSION=latest \
-		-t "$(BASE_IMAGE):latest" \
+		-t "$(IMAGE):latest" \
 		--platform linux/amd64 \
 		--push \
 		.
